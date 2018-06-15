@@ -1,10 +1,10 @@
 {% set provider= "Consul" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 
 {% set name = "terraform-provider-" + provider.lower() %}
 {% set x4_plugin = name + '_v' + version + "_x4" %}
 
-{% set sha256 = "e91526e67f511c36071f8f69f76d48f3d3d5ab49e6457fd3396bfbe9d2bdf8de" %}
+{% set sha256 = "58a0a757f33a1d7c17b35a945bcf92d3b0d197d2f87521c8ba848c9e45a9ee68" %}
 {% set sha256_win32 = "ff313c7fcd3950940ac9ed62eb6c72af9b0769554805b6bacbbab1ebfe861802" %}
 {% set sha256_win64 = "9c3b7944b72d9944965ad45a9289f715081e9e4f9ac5d4606bd0c3cc7a90faa0" %}
 
