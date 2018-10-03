@@ -1,5 +1,5 @@
 {% set provider = "Consul" %}
-{% set version = "2.1.0" %}
+{% set version = "2.2.0" %}
 
 {% set name = "terraform-provider-" + provider.lower() %}
 {% set x4_plugin = name + '_v' + version + "_x4" %}
@@ -11,13 +11,13 @@ package:
 source:
   - folder: src/github.com/terraform-providers/{{ name|lower }}
     url: https://github.com/terraform-providers/{{ name }}/archive/v{{ version }}.tar.gz  # [not win]
-    sha256: 5a28df42ff4247de8abaf1c3f91d488207731e7a090eaf7e8f7ed8c584b98baa  # [not win]
+    sha256: f6f31888f654bb9096ebd5a86c548f4651a67907142c2ae2fb241f1bea96849a  # [not win]
 
     url: https://releases.hashicorp.com/{{ name }}/{{ version }}/{{ name }}_{{ version }}_windows_amd64.zip  # [win64]
-    sha256: cd2df4dbc5f3e84db7419c940ab2d064256782adbbef7f45a75d5636cd4be9b4  # [win64]
+    sha256: 52972eaccb96ef6efe8a016090267373ca5b2d5cf666fa4cdee14ae38b156316  # [win64]
 
 build:
-  number: 1001
+  number: 1000
   script:
     - XCOPY src\github.com\terraform-providers\{{ name|lower }}\{{ x4_plugin }}.exe %LIBRARY_BIN%  # [win]
 
